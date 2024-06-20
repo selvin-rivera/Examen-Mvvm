@@ -7,7 +7,7 @@
     <ContentPage.BindingContext>
         <viewModel:FormCuadraticaViewModel/>
     </ContentPage.BindingContext>
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="40" Spacing="20">
         <Label Text="Ingrese valor de a:"/>
         <Entry Text="{Binding A}" Keyboard="Numeric"/>
         <Label Text="Ingrese valor de b:"/>
