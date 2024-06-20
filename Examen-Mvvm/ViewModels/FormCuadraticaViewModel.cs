@@ -31,19 +31,19 @@ namespace Examen_Mvvm.ViewModels
             {
                 if (A == 0)
                 {
-                    Console.WriteLine("El valor de 'a' no puede ser 0.");
+                    Alerta("ERROR", "El valor de 'a' no puede ser 0"); 
                     return;
                 }
 
-                Discriminante = Math.Pow(A, B - 4 * A * C);
+                Discriminante = Math.Pow(B, 2) - 4 * A * C;
 
                 if (Discriminante < 0)
                 {
-                    Console.WriteLine("El discriminante es negativo. No hay raíces reales.");
+                    Alerta("ERROR", "El valor de 'discriminante' negativo es inválido");
                 }
                 else
                 {
-                    Console.WriteLine("El discriminante es válido. Puedes proceder con el cálculo de las raíces.");
+                    Alerta("ACIERTO", "Discriminante válido. ¡Operacion Exitosa!");
                 }
                 X1 = (-B + Math.Sqrt(Discriminante)) / (2 * A);
                 X2 = (-B - Math.Sqrt(Discriminante)) / (2 * A);
@@ -64,6 +64,8 @@ namespace Examen_Mvvm.ViewModels
             A = 0;
             B = 0;
             C = 0;
+            X1 = 0;
+            X2 = 0;
         }
     }
 }
